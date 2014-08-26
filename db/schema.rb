@@ -11,12 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140811081452) do
+ActiveRecord::Schema.define(version: 20140826041004) do
 
   create_table "abcs", force: true do |t|
     t.string   "ab"
     t.integer  "cd"
     t.text     "efg"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tab1s", force: true do |t|
+    t.integer  "ii"
+    t.string   "msg"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tab2s", id: false, force: true do |t|
+    t.string   "mykey"
+    t.integer  "ii"
+    t.string   "msg"
+    t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
